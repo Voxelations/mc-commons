@@ -1,0 +1,53 @@
+[versions]
+# :common
+lombok = "1.18.34"
+slf4j = "2.0.13"
+guice = "7.0.0"
+configurate-yaml = "4.1.2"
+jooq = "3.19.10"
+hikaricp = "5.0.1"
+mysql-connector-j = "9.0.0"
+postgresql = "42.7.3"
+adventure = "4.17.0"
+cloud-core = "2.0.0-rc.2"
+cloud-annotations = "2.0.0-rc.2"
+
+# :paper
+cloud-paper = "2.0.0-SNAPSHOT"
+smart-invs = "1.3.0"
+paper = "1.21-R0.1-SNAPSHOT"
+
+# :gradle-plugin / gradle plugins
+lombok-plugin = "8.6"
+spotless-plugin-gradle = "6.25.0"
+shadow-plugin = "8.1.1"
+plugin-yml = "0.6.0"
+paperweight-plugin = "1.7.2"
+
+[libraries]
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+guice = { module = "com.google.inject:guice", version.ref = "guice" }
+configurate-yaml = { module = "org.spongepowered:configurate-yaml", version.ref = "configurate-yaml" }
+jooq = { module = "org.jooq:jooq", version.ref = "jooq" }
+hikaricp = { module = "com.zaxxer:HikariCP", version.ref = "hikaricp" }
+mysql-connector-j = { module = "com.mysql:mysql-connector-j", version.ref = "mysql-connector-j" }
+postgresql = { module = "org.postgresql:postgresql", version.ref = "postgresql" }
+adventure-api = { module = "net.kyori:adventure-api", version.ref = "adventure" }
+adventure-text-minimessage = { module = "net.kyori:adventure-text-minimessage", version.ref = "adventure" }
+cloud-core = { module = "org.incendo:cloud-core", version.ref = "cloud-core" }
+cloud-annotations = { module = "org.incendo:cloud-annotations", version.ref = "cloud-annotations" }
+
+cloud-paper = { module = "org.incendo:cloud-paper", version.ref = "cloud-paper" }
+smart-invs = { module = "fr.minuskube.inv:smart-invs", version.ref = "smart-invs" }
+paper-api = { module = "io.papermc.paper:paper-api", version.ref = "paper" }
+
+lombok-plugin = { module = "io.freefair.gradle:lombok-plugin", version.ref = "lombok-plugin" }
+spotless-plugin-gradle = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless-plugin-gradle" }
+shadow-plugin = { module = "com.github.johnrengelman.shadow:com.github.johnrengelman.shadow.gradle.plugin", version.ref = "shadow-plugin" }
+plugin-yml = { module = "net.minecrell:plugin-yml", version.ref = "plugin-yml" }
+paperweight-plugin = { module = "io.papermc.paperweight.userdev:io.papermc.paperweight.userdev.gradle.plugin", version.ref = "paperweight-plugin" }
+
+[plugins]
+paperweight-userdev = { id = "io.papermc.paperweight.userdev", version.ref = "paperweight-plugin" }
+plugin-yml-paper = { id = "net.minecrell.plugin-yml.paper", version.ref = "plugin-yml" }
