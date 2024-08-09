@@ -1,8 +1,5 @@
-import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
-
 plugins {
     `java-library`
-    id("com.github.johnrengelman.shadow")
 }
 
 repositories {
@@ -19,14 +16,6 @@ configure<JavaPluginExtension> {
 }
 
 tasks {
-    build {
-        dependsOn("shadowJar")
-    }
-
-    withType<ShadowJar> {
-        archiveFileName.set("${rootProject.name}-${project.name}-${project.version}.jar")
-    }
-
     withType<JavaCompile> {
         options.encoding = Charsets.UTF_8.name()
         options.release.set(21)

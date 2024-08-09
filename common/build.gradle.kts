@@ -1,4 +1,6 @@
 plugins {
+    id("jvm-conventions")
+    id("shadow-conventions")
     id("publishing-conventions")
 }
 

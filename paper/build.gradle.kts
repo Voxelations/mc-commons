@@ -1,6 +1,8 @@
 import net.minecrell.pluginyml.paper.PaperPluginDescription
 
 plugins {
+    id("jvm-conventions")
+    id("shadow-conventions")
     id("publishing-conventions")
     alias(libs.plugins.paperweight.userdev)
     alias(libs.plugins.plugin.yml.paper)

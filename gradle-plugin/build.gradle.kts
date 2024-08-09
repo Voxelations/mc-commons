@@ -1,6 +1,7 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 
 plugins {
+    id("jvm-conventions")
     id("publishing-conventions")
     `kotlin-dsl`
 }

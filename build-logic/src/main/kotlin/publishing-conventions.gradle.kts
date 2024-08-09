@@ -1,5 +1,4 @@
 plugins {
-    id("jvm-conventions")
     `maven-publish`
 }
 
