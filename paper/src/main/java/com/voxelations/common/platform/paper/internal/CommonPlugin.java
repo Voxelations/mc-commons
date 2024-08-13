@@ -20,7 +20,7 @@ public class CommonPlugin extends JavaPlugin {
         // Enable any registrable services provided by commons
         ConfigService configService = injector.getInstance(ConfigService.class);
         configService.enable();
-        configService.register(getDataPath(), SQLConfig.class);
+        configService.register(getDataFolder().toPath(), SQLConfig.class);
     }
 
     @Override

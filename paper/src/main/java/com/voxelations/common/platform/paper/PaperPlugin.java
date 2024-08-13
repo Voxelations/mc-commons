@@ -45,6 +45,6 @@ public abstract class PaperPlugin extends JavaPlugin implements Registrable, Plu
 
     @Override
     public Path getDataDirectory() {
-        return getDataPath();
+        return getDataFolder().toPath();
     }
 }

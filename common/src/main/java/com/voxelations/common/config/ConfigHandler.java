@@ -24,7 +24,7 @@ public class ConfigHandler<T> implements AutoCloseable {
     public ConfigHandler(WatchServiceListener fileWatcher, TypeSerializerCollection.Builder serializers, Path dataDirectory, Class<T> clazz) {
         this.clazz = clazz;
 
-        String name = clazz.getSimpleName().toLowerCase().replace("container", "") + ".yml";
+        String name = clazz.getSimpleName().toLowerCase().replace("container", "").replace("feature", "") + ".yml";
         Path configFile = dataDirectory.resolve(name);
 
         this.base = fileWatcher.listenToConfiguration(
